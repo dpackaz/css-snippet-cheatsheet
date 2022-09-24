@@ -33,12 +33,12 @@ body{
 
 .row {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
 .grid {
     display: grid;
+    flex-wrap: wrap;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -55,9 +55,12 @@ h2{
     border-width: 1px;
     width: 90%;
     background-color: rgb(32, 29, 40);
-    
 }
 
+h2:hover{
+    transition: all 0.5s ease-in-out;
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
 
 .column {
     display: flex;
@@ -80,7 +83,27 @@ h2{
     
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 footer{
     text-align: center;
     font-family: sans-serif;
 }
+
+@media screen and (max-width: 992px){
+    .card {
+        display: grid;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px){
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+}   
