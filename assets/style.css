@@ -29,6 +29,7 @@ body{
     border-style: dashed;
     text-align: center;
     border-width: 2px;
+    flex: 1 0 30%;
 }
 
 .row {
@@ -37,7 +38,7 @@ body{
 }
 
 .grid {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
@@ -96,14 +97,12 @@ footer{
 
 @media screen and (max-width: 992px){
     .card {
-        display: grid;
-        flex-wrap: wrap;
+        flex: 1 0 50%;
     }
 }
 
 @media screen and (max-width: 768px){
     main {
-        flex-direction: column;
-        width: 100%;
+        flex: 1 0 100%;
     }
 }   
